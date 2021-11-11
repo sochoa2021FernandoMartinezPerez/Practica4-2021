@@ -1,3 +1,24 @@
 <resources>
     <string name="app_name">Practica4-2021</string>
+    <string name="acercade">Acerca de...</string>
+    <string name="ordenar">Ordenar</string>
+    <string name="vacio"></string>
+    <string-array name="prioridad">
+        <item>Baja</item>
+        <item>Media</item>
+        <item>Alta</item>
+    </string-array>
+    <string-array name="categoria">
+        <item>Reparación</item>
+        <item>Instalación</item>
+        <item>Mantenimiento</item>
+        <item>Comercial</item>
+        <item>otros</item>
+    </string-array>
+    <string-array name="estado">
+        <item>Abierta</item>
+        <item>En curso</item>
+        <item>Terminada</item>
+    </string-array>
+
 </resources>
