@@ -3,6 +3,7 @@ package net.iesseveroochoa.fernandomartinezperez.practica4_2021.model;
 import android.app.Application;
 
 import androidx.annotation.NonNull;
+import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
@@ -11,13 +12,13 @@ import net.iesseveroochoa.fernandomartinezperez.practica4_2021.Tarea;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TareaViewModel {
+public class TareaViewModel extends AndroidViewModel {
     private MutableLiveData<List<Tarea>> listaTareasLiveData;
 
     private List<Tarea> listaTareas;
 
     public TareaViewModel(@NonNull Application application) {
-        super();
+        super(application);
 
         listaTareasLiveData = new MutableLiveData<List<Tarea>>();
         crearDatos();
