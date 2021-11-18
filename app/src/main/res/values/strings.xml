@@ -20,5 +20,21 @@
         <item>En curso</item>
         <item>Terminada</item>
     </string-array>
+    <string name="categoria">Categoria</string>
+    <string name="prioridad">Prioridad</string>
+    <string name="estado">Estado</string>
+    <string name="tecnico">Tectico Asignado:</string>
+    <string name="brevedes">Breve descripcion</string>
+    <string name="descrtipcion">Descripcion</string>
+    <string name="mensageBorrar">¿Esta seguro de borrar la tarea</string>
+    <string name="borrar">Borrar tarea</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="nTarea">Tarea nº</string>
+    <string name="nuevaT">Nueva Tarea</string>
+    <string name="abierta">Abierta</string>
+    <string name="enCurso">En curso</string>
+    <string name="terminada">Terminada</string>
+    <string name="cvacioMensage">Alguno de los campos esta vacio, rellenelo para añadir tarea</string>
+    <string name="campovacio">Campo Vacia</string>
 
 </resources>

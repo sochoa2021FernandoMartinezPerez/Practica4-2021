@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/prusia"
     tools:context=".NuevaTareaActivity">
 
     <TextView
@@ -13,6 +14,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:text="@string/categoria"
+        android:textColor="@android:color/holo_blue_dark"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -22,6 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="@string/prioridad"
+        android:textColor="@android:color/holo_blue_dark"
         app:layout_constraintStart_toStartOf="@+id/textView"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -31,6 +34,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="16dp"
+        android:backgroundTint="@android:color/holo_blue_dark"
         android:entries="@array/categoria"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView"
@@ -41,6 +45,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
+        android:backgroundTint="@android:color/holo_blue_dark"
         android:entries="@array/prioridad"
         app:layout_constraintEnd_toEndOf="@+id/spCategoria"
         app:layout_constraintStart_toEndOf="@+id/textView2"
@@ -53,6 +58,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
         android:text="@string/estado"
+        android:textColor="@android:color/holo_blue_dark"
         app:layout_constraintStart_toStartOf="@+id/textView2"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
@@ -61,6 +67,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
+        android:backgroundTint="@android:color/holo_blue_dark"
         android:entries="@array/estado"
         app:layout_constraintEnd_toEndOf="@+id/spPrioridad"
         app:layout_constraintStart_toEndOf="@+id/textView3"
@@ -72,6 +79,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="@string/tecnico"
+        android:textColor="@android:color/holo_blue_dark"
         app:layout_constraintStart_toStartOf="@+id/textView2"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
@@ -82,6 +90,7 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text="@string/vacio"
+        android:textColor="@android:color/holo_blue_dark"
         app:layout_constraintEnd_toEndOf="@+id/spEstado"
         app:layout_constraintStart_toStartOf="@+id/textView4"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
@@ -92,6 +101,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="@string/brevedes"
+        android:textColor="@android:color/holo_blue_dark"
         app:layout_constraintStart_toStartOf="@+id/etTecnico"
         app:layout_constraintTop_toBottomOf="@+id/etTecnico" />
 
@@ -102,6 +112,7 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text="@string/vacio"
+        android:textColor="@android:color/holo_blue_dark"
         app:layout_constraintEnd_toEndOf="@+id/etTecnico"
         app:layout_constraintStart_toStartOf="@+id/textView5"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
@@ -112,6 +123,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="@string/descrtipcion"
+        android:textColor="@android:color/holo_blue_dark"
         app:layout_constraintStart_toStartOf="@+id/etResumen"
         app:layout_constraintTop_toBottomOf="@+id/etResumen" />
 
@@ -126,7 +138,9 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/etResumen"
         app:layout_constraintStart_toStartOf="@+id/textView6"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        android:textColor="@android:color/holo_blue_dark"
+        android:autofillHints="" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabGuardar"

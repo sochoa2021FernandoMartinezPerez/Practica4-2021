@@ -26,6 +26,7 @@
         android:fontFamily="sans-serif"
         android:maxLines="2"
         android:text="@string/vacio"
+        android:textColor="@android:color/holo_blue_dark"
         android:textSize="10sp"
         app:layout_constraintEnd_toStartOf="@+id/ivEditar"
         app:layout_constraintStart_toEndOf="@+id/ivEstado"
@@ -37,6 +38,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:text="@string/vacio"
+        android:textColor="@android:color/holo_blue_dark"
         app:layout_constraintEnd_toStartOf="@+id/ivEditar"
         app:layout_constraintStart_toStartOf="@+id/tvResumen"
         app:layout_constraintTop_toBottomOf="@+id/tvResumen" />

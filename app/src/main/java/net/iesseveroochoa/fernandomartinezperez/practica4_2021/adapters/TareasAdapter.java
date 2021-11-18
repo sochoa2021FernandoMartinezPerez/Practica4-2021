@@ -21,8 +21,8 @@ public class TareasAdapter extends RecyclerView.Adapter<TareasAdapter.TareaViewH
     private OnItemClickBorrarListener listenerBorrar;
     private OnItemClickEditarListener listenerEditar;
 
-    public void setListaTareas(List<Tarea> tareas){
-        listaTareas=tareas;
+    public void setListaTareas(List<Tarea> tareas) {
+        listaTareas = tareas;
         notifyDataSetChanged();
     }
 
@@ -42,13 +42,13 @@ public class TareasAdapter extends RecyclerView.Adapter<TareasAdapter.TareaViewH
             holder.tvTecnico.setText(tarea.getId() + "-" + tarea.getTecnico());
             switch (tarea.getEstado()) {
                 case "Abierta":
-                    //holder.ivEstado.setImageResource(R.mipmap.ic_abierta);
+                    holder.ivEstado.setImageResource(R.mipmap.ic_abierta);
                     break;
                 case "En curso":
-                    //holder.ivEstado.setImageResource(R.mipmap.ic_en_curso);
+                    holder.ivEstado.setImageResource(R.mipmap.ic_en_curso);
                     break;
                 case "Terminada":
-                    //holder.ivEstado.setImageResource(R.mipmap.ic_terminada);
+                    holder.ivEstado.setImageResource(R.mipmap.ic_terminada);
                     break;
             }
             if (tarea.getPrioridad().equals("alta")) {
@@ -62,7 +62,7 @@ public class TareasAdapter extends RecyclerView.Adapter<TareasAdapter.TareaViewH
 
     @Override
     public int getItemCount() {
-        if (listaTareas!= null)
+        if (listaTareas != null)
             return listaTareas.size();
         else return 0;
     }
