@@ -25,11 +25,11 @@ public class MainActivity extends AppCompatActivity {
     private TareaViewModel tareaViewModel;
     private FloatingActionButton fabNuevaTarea;
     private TareasAdapter adapter;
-    int cuentaTareas = 1;
     public static final int OPTION_REQUEST_CREAR = 1;
     public static final int OPTION_REQUEST_EDITAR = 2;
     public final static String EXTRA_TAREA = "EXTRA_TAREA";
 
+    /**Este es el metodo que se llama cuando se inicia la actividad*/
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,6 +41,8 @@ public class MainActivity extends AppCompatActivity {
         adapter = new TareasAdapter();
         rvTareas.setLayoutManager(new LinearLayoutManager(this));
         rvTareas.setAdapter(adapter);
+
+        /**Aqui se llama al View Model y actualiza el Recicler View*/
 
         tareaViewModel = new ViewModelProvider(this).get(TareaViewModel.class);
         tareaViewModel.getListaTareas().observe(this, adapter::setListaTareas);
@@ -75,12 +77,14 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    /**Aqui se llama muestra el menu*/
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
 
+    /**Aqui se obserba cuando se pulsa uno de los botones del menu y ejecuta la respuesta*/
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
@@ -95,18 +99,20 @@ public class MainActivity extends AppCompatActivity {
         } else if (id == R.id.accion_ordenar) {
 
 
+
             return false;
 
         }
         return super.onOptionsItemSelected(item);
     }
+    /**Aqui se recogen los datos de la nuava tarea*/
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 
 
         super.onActivityResult(requestCode, resultCode, data);
         if (resultCode == Activity.RESULT_OK) {
-            /**En caso de que la tarea sea nuava aqui se recoge y se añade al RV*/
+            /**En caso de que la tarea sea nuava aqui se recoge y se añade al recycler view*/
             Tarea tarea = data.getParcelableExtra(EXTRA_TAREA);
 
             if (requestCode == OPTION_REQUEST_CREAR) {

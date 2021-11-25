@@ -36,14 +36,16 @@ public class TareaViewModel extends AndroidViewModel {
     }
     /**Este metodo sirve par añadir una tarea*/
     public void addTarea(Tarea tarea) {
-        int i = listaTareas.indexOf(tarea);
-        if (i < 0) {
+        int index = 0;
+
+        index = listaTareas.indexOf(tarea);
+        if (index < 0) {
             listaTareas.add(tarea);
             listaTareasLiveData.setValue(listaTareas);
 
         } else {
-            listaTareas.remove(i);
-            listaTareas.add(i, tarea);
+            listaTareas.remove(index);
+            listaTareas.add(index, tarea);
             listaTareasLiveData.setValue(listaTareas);
 
         }
@@ -55,22 +57,8 @@ public class TareaViewModel extends AndroidViewModel {
             listaTareasLiveData.setValue(listaTareas);
         }
     }
-    /**Este metodo sive para contar el numero de tareas en la lista*/
-    public int getItemCount() {
-        if (listaTareas != null) {
-            return listaTareas.size();
-        } else {
-            return 0;
-        }
-    }
-    /**Este metodo sirve para conseguir el indice de una tarea dentro de la lista*/
-    public int tareaIndexOf(Tarea tarea) {
-        if (tarea == null) {
-            return 0;
-        } else {
-            return listaTareas.indexOf(tarea);
-        }
-    }
+
+
     /**Este metodo sirve para crear las tareas de ejemplo*/
     private void crearDatos() {
         listaTareas = new ArrayList<Tarea>();
